@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+.logo{
+    width: 120px;
+    height: 60px;
+    vertical-align: middle;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    font-family: 'Aboreto', cursive;
+    font-size: 40px;
+}
+
+.navbar{
+    background-color: #a5d6a7 important!;
+}
+
+.botonesMenu{
+    font-family: 'Aboreto', cursive;
+    font-size: 18px;
+}
+
+.botones{
+    display: flex;
+    align-self: flex-end;
+}
