@@ -15,6 +15,10 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
+import { CartWidget } from "../CartWidget/CartWidget";
+
+
+
 
 
 const navbar = () => {
@@ -25,6 +29,7 @@ const navbar = () => {
     elevation={0}
     sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
   >
+    <carWidget/>
     <Toolbar sx={{ flexWrap: 'wrap' }}>
       <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
       <div className="nav">
@@ -53,12 +58,10 @@ const navbar = () => {
           <p className="botonesMenu">Promociones</p>
         </Link>
         <Link
-          variant="button"
-          color="#fafafa"
           href="#"
-          sx={{ my: 1, mx: 1.5 }}
+          className="botones"
         >
-          <p className="botonesMenu">Checkout</p>
+          <div><CartWidget/></div>
         </Link>
       </nav>
     </Toolbar>
