@@ -7,8 +7,7 @@ import Fotomora from "./Components/ItemContainerList/mora.webp";
 import MediaCard from "./Components/ItemContainerList/ItemContainerList";
 
 
-class App extends React.Component{
-  render() {
+const App = () => {
     return(
       <div>
         <Navbar/>
@@ -29,7 +28,5 @@ class App extends React.Component{
     </div>
     )
   }
-
-}
 
 export default App;
