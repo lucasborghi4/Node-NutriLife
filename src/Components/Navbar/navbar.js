@@ -19,7 +19,6 @@ const navbar = () => {
     elevation={0}
     sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
   >
-    <carWidget/>
     <Toolbar sx={{ flexWrap: 'wrap' }}>
       <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
       <div className="nav">
@@ -30,7 +29,7 @@ const navbar = () => {
       NutriLife
       </div>
       </Typography>
-      <nav className="botones">
+      <nav className="botones d-flex align-items-center">
         <Link
           variant="button"
           color="#fafafa"
