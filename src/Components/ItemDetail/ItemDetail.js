@@ -2,14 +2,15 @@ import React from "react"
 import Item from "../Item/Item";
 import "../ItemDetailContainer/ItemDetailContainer"
 
-function ItemDetail ({producto}) {
-            return(
-                <div className="ItemContainer">
-            
-                    <Item key={producto.id} product={producto.producto} />
+function ItemDetail ({product}) {
+    console.log(product)
+    return(
+        <div className="ItemContainer">
         
-                </div>
-            )
-        }
+        <Item key={product.id} product={product} />
+
+        </div>
+    )
+}
 
 export default ItemDetail;
