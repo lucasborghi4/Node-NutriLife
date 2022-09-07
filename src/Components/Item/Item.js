@@ -5,11 +5,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Counter from '../Counter/Counter';
+import { Link } from 'react-router-dom';
 
 
 
 export default function Item({product}) {
-    const {producto, descripcion, precio, image, stock, initial} = product
+    const {id,producto, descripcion, precio, image, stock, initial} = product
     return (
       <div className="box">
       <Card sx={{ maxWidth: 200}}>
@@ -26,6 +27,9 @@ export default function Item({product}) {
           <Typography gutterBottom variant="h7" component="div" sx={{ height: 100}}>
           {descripcion}
           </Typography>
+          <Link to={`/detail/${id}`}>
+            <button>ver detalles</button>
+          </Link>
           <Typography variant="body2" color="text.secondary">
           Precio : ${precio}
           </Typography>
