@@ -3,7 +3,7 @@ import "./Counter.css";
 
 export default function Counter({stock, initial}) {
 
-    const [counter, setCounter] = useState(initial);
+    const [counter, setCounter] = useState(0);
 
     const handlerCounterUp = () => {
         if (counter < stock) {setCounter(counter + 1)};

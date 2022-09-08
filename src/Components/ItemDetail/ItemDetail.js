@@ -1,5 +1,5 @@
 import React from "react"
-import Item from "../Item/Item";
+import ItemCard from "../ItemCard/ItemCard";
 import "../ItemDetailContainer/ItemDetailContainer"
 
 function ItemDetail ({product}) {
@@ -7,7 +7,7 @@ function ItemDetail ({product}) {
     return(
         <div className="ItemContainer">
         
-        <Item key={product.id} product={product} />
+            <ItemCard key={product.id} product={product} />
 
         </div>
     )

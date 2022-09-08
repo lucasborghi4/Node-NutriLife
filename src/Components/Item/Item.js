@@ -10,9 +10,9 @@ import { Link } from 'react-router-dom';
 
 
 export default function Item({product}) {
-    const {id,producto, descripcion, precio, image, stock, initial} = product
-    return (
-      <div className="box">
+  const {id,producto, descripcion, precio, image, stock, initial} = product
+  return (
+    <div className="box">
       <Card sx={{ maxWidth: 200}}>
         <CardMedia
           component="img"
@@ -22,20 +22,20 @@ export default function Item({product}) {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-          {producto}
+            {producto}
           </Typography>
           <Typography gutterBottom variant="h7" component="div" sx={{ height: 100}}>
-          {descripcion}
+            {descripcion}
           </Typography>
-          <Link to={`/detail/${id}`}>
-            <button>ver detalles</button>
+          <Link to={`/item/${id}`}>
+            <button className="detalle">Ver Detalles</button>
           </Link>
           <Typography variant="body2" color="text.secondary">
-          Precio : ${precio}
+            Precio : ${precio}
           </Typography>
           <Counter stock= {stock} initial= {initial}/>
         </CardContent>
       </Card>
-      </div>
-    );
-  }
+    </div>
+  );
+}

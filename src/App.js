@@ -9,11 +9,12 @@ const App = () => {
     return(
       <div>
         <BrowserRouter>
-        <Navbar/>
-        <Routes>
-        <Route path='/' element={<ItemListContainer/>}/>
-          <Route path='/detail/:id' element={<ItemDetailContainer/>} />
-        </Routes>
+          <Navbar/>
+          <Routes>
+            <Route path='/' element={<ItemListContainer/>}/>
+            <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
+            <Route path='/item/:id' element={<ItemDetailContainer/>} />
+          </Routes>
         </BrowserRouter>
     </div>
     )

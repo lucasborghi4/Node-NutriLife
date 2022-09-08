@@ -15,6 +15,7 @@
     flex-wrap: wrap;
     margin: 10px;
     justify-content: center;
+    align-items: center;
 }
 
 .botones{
@@ -31,4 +32,15 @@
 .boton{
     width: 50px;
     font-family: 'Aboreto', cursive;
+}
+
+.detalle{
+    font-family: 'Aboreto', cursive;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.a{
+    display: flex;
+    align-items: center;
 }
