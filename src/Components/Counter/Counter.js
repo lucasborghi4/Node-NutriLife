@@ -1,18 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./Counter.css";
 
-export default function Counter({stock, initial}) {
+export default function Counter({counter, setCounter, stock, initial}) {
 
-    const [counter, setCounter] = useState(0);
 
     const handlerCounterUp = () => {
-        if (counter < stock) {setCounter(counter + 1)};
-    };
+        if (counter < stock) {
+        setCounter(counter + 1);
+        console.log (counter)
+    };}
 
     const handlerCounterDown = () => {
         if (counter > initial) {
-        setCounter(counter - 1);}
-    };
+        setCounter(counter - 1);
+        console.log (counter)
+    };}
+    
 
     return(
         <div>
@@ -22,5 +25,4 @@ export default function Counter({stock, initial}) {
             <div className="botones d-flex justify-content-evenly"><button type="button" className="boton btn btn-secondary btn-sm" onClick={handlerCounterDown}>-</button>
             <button type="button" className="boton btn btn-secondary btn-sm" onClick={handlerCounterUp}>+</button></div>
         </div>
-    )
-}
+    )}

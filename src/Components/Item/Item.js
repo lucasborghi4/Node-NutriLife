@@ -4,13 +4,12 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import Counter from '../Counter/Counter';
 import { Link } from 'react-router-dom';
 
 
 
 export default function Item({product}) {
-  const {id,producto, descripcion, precio, image, stock, initial} = product
+  const {id,producto, descripcion, image} = product
   return (
     <div className="box">
       <Card sx={{ maxWidth: 200}}>
@@ -30,10 +29,6 @@ export default function Item({product}) {
           <Link to={`/item/${id}`}>
             <button className="detalle">Ver Detalles</button>
           </Link>
-          <Typography variant="body2" color="text.secondary">
-            Precio : ${precio}
-          </Typography>
-          <Counter stock= {stock} initial= {initial}/>
         </CardContent>
       </Card>
     </div>
