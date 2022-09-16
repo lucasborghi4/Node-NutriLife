@@ -1,10 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import "./ItemCard.css";
 import Counter from '../Counter/Counter';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../CartContext/CartContext';
 
 
 export default function ItemCard({product}) {
+    const [compra , setCompra] = useContext(CartContext);
     const {producto, descripcion, precio, image, stock, initial} = product
 
     const [counter, setCounter] = useState(0);
@@ -13,7 +15,15 @@ export default function ItemCard({product}) {
    
     const onSubmit = (e) => {
         e.preventDefault();
-        console.log ("quisiste comprar " + counter + " " + producto)
+        const nuevoProducto = {producto, precio, counter}
+        setCompra([...compra, nuevoProducto])
+        console.log(compra)
+    }
+
+    const clear = (e) => {
+        e.preventDefault();
+        setCompra([])
+        console.log(compra)
     }
 
 
@@ -31,8 +41,11 @@ export default function ItemCard({product}) {
             </div>
       </div>
       <form onSubmit={onSubmit}>
-      <Link to={`/cart`}><button className="btn btn-primary botoncito">Comprar Ahora</button></Link>
+      <button className="btn btn-primary botoncito">Comprar Ahora</button>
       <Link to={`/`}><button className="btn btn-primary botoncito">Volver atrás</button> </Link></form>
+      <form onSubmit = {clear}>
+      <button className="btn btn-primary botoncito">Limpiar Carrito</button>
+      </form>
       </div>
     );
   }
